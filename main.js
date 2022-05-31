@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 require("dotenv").config()
 
-// const generateImage = require("./generateImage")
+const generateImage = require("./generateImage")
 
 const client = new Discord.Client({
     intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_MEMBERS"] });
@@ -36,15 +36,15 @@ module.exports = bot
 //     }
 // })
 
-// const welcomeChat = "979133690665914480"
+const welcomeChat = "948621070502604902"
 
-// client.on("guildMemberAdd", async (member) => {
-//     const img = await generateImage(member)
-//     member.guild.channels.cache.get(welcomeChat).send({
-//         content: `<@${member.id}> Welcome to the server!`,
-//         files: [img]
-//     })
-// })
+client.on("guildMemberAdd", async (member) => {
+    const img = await generateImage(member)
+    member.guild.channels.cache.get(welcomeChat).send({
+        content: `<@${member.id}> Welcome to the server!`,
+        files: [img]
+    })
+})
 
 // client.on("guildMemberRemove", async (member) => {
 //     const img = await generateImage(member)
