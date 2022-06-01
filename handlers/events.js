@@ -48,8 +48,4 @@ function initEvents(bot) {
     client.on("messageCreate", (message) => {
         triggerEventHandler(bot, "messageCreate", message)
     })
-
-    client.on("guildMemberAdd", (member) => {
-        triggerEventHandler(bot, "guildMemberAdd", member)
-    })
 }

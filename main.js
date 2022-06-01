@@ -26,16 +26,6 @@ client.loadCommands(bot, false)
 
 module.exports = bot
 
-// client.on("ready", () => {
-//     console.log("I'm here Goshujin-sama");
-// });
-
-// client.on("messageCreate", (message) => {
-//     if (message.content == "hi") {
-//         message.reply("Hello")
-//     }
-// })
-
 const welcomeChat = "948621070502604902"
 
 client.on("guildMemberAdd", async (member) => {
@@ -45,13 +35,5 @@ client.on("guildMemberAdd", async (member) => {
         files: [img]
     })
 })
-
-// client.on("guildMemberRemove", async (member) => {
-//     const img = await generateImage(member)
-//     member.guild.channels.cache.get(welcomeChat).send({
-//         content: `<@${member.id}> Good By!`,
-//         files: [img]
-//     })
-// })
 
 client.login(process.env.TOKEN);
