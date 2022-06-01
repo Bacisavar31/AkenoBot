@@ -9,7 +9,7 @@ const client = new Discord.Client({
 
 let bot = {
     client, 
-    prefix: "31.",
+    prefix: "akeno.",
     owners: ["307574111071240194"]
 }
 
