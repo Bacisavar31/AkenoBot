@@ -6,8 +6,6 @@ module.exports = {
     permissions: [],
     devOnly: false,
     run: async ({client, message, args}) => {
-        const sender = message.author.username
-
-        
+        message.channel.send("My master is Yaman-sama also known as Bacisavar31")
     }
 }
