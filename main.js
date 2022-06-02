@@ -28,7 +28,7 @@ module.exports = bot
 
 const welcomeChat = "948621070502604902"
 
-client.on("guildMemberAdd", async (member) => {
+client.on("guildMemberAdd", async (member) => { // breaks for other guilds
     const img = await generateImage(member)
     member.guild.channels.cache.get(welcomeChat).send({
         content: `<@${member.id}> Welcome to the server!`,
